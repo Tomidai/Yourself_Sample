@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE76D010-02E7-4CD6-979B-1E3CF297B8B5}</ProjectGuid>
+    <ProjectGuid>{24B57D72-00F1-4448-9DA7-516E137EC11A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Teach_Yourself</RootNamespace>
-    <AssemblyName>Teach_Yourself</AssemblyName>
+    <RootNamespace>Yourself</RootNamespace>
+    <AssemblyName>Yourself</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

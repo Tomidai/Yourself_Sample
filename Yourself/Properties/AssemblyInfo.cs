@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("Teach_Yourself")]
+[assembly: AssemblyTitle("Yourself")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("Teach_Yourself")]
+[assembly: AssemblyProduct("Yourself")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("ee76d010-02e7-4cd6-979b-1e3cf297b8b5")]
+[assembly: Guid("24b57d72-00f1-4448-9da7-516e137ec11a")]
 
 // アセンブリのバージョン情報は次の 4 つの値で構成されています:
 //
