@@ -15,6 +15,7 @@ namespace Yourself {
         static void Main(string[] args) {
             Console.WriteLine(Myclass.GetBmi(76, 174));
 
+            //何かのキー入力で終了する
             Console.ReadKey();
         }
     }
