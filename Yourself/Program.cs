@@ -5,33 +5,57 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Yourself {
-    class Person {
-        public string firstName;
-        public string lastName;
+    public abstract class Super {
+        public abstract void Method1();
+        public virtual void Method2() { }
 
-        //引数greeting/titleに規定値を設定
-        public void Show(string greeting = "こんにちは", string title = "さん") {
-            Console.WriteLine($"{greeting},{this.lastName}{this.firstName}{title}");
+        //静的メンバーをorverride,virtual,abstractすることはできない
+
+        public static void Method4() { }
+    }
+
+    public class sub : Super {
+        public override void Method1() {
+            
         }
 
-        public void DemoProc(string name = "default name", int age = 0) {
-            Console.WriteLine($"{name}{age}");
+        public new void Method2() { }
+
+        //newキーワードによる隠蔽は可能...
+        public new static void Method4() { }
+    }
+
+    public class Hoge {
+        private int piyo = 1;   //non-static
+        private static int piyo2;   //static
+
+        //non-staticなメソッドはstatic/non-staticのフィールドにアクセスできる
+        public void Fuga1(int i) {
+            piyo = 2;
+            piyo2 = 3;
+        }
+
+        //staticなメソッドはstaticのフィールドのみアクセスできる
+        public static void Fuga2(int i) {
+            //piyo = 2;     //アクセスできない
+            piyo2 = 3;
         }
     }
 
     class Program {
+        public int TotalProducts(params int[] values) {
+            int result = 1;
+            foreach(var value in values) {
+                result *= value;
+            }
+            return result;
+        }
+
         static void Main(string[] args) {
-            var p = new Person() {
-                lastName = "山田", firstName = "taro"
-            };
-            p.DemoProc();
-            p.DemoProc("tomita", 20);
-            p.DemoProc("tomita");
-            p.DemoProc(age: 20);
-            p.DemoProc(name: "tomita");
-            p.DemoProc(name: "tomita", age: 20);
-            p.DemoProc(age: 20, name: "tomita");
-            //p.DemoProc(20);   !error
+            var v = new Program();
+            Console.WriteLine(v.TotalProducts(12, 14, -2));
+            Console.WriteLine(v.TotalProducts(5, 7, 8, 2));
+
             //何かのキー入力で終了する
             Console.ReadKey();
         }
